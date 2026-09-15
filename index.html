@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual Poligonal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Menú de Tiendas -->
+    <div id="menuPantalla" class="pantalla activa">
+        <div class="contenedor-menu">
+            <h1>🛍️ Tienda Virtual Poligonal</h1>
+            <p>Selecciona una tienda para comenzar</p>
+            <div class="grid-tiendas">
+                <div class="tarjeta-tienda" data-tienda="electronica">
+                    <div class="icono">⚡</div>
+                    <h3>Electrónica</h3>
+                    <p>Laptops, teléfonos y accesorios</p>
+                </div>
+                <div class="tarjeta-tienda" data-tienda="ropa">
+                    <div class="icono">👕</div>
+                    <h3>Ropa</h3>
+                    <p>Camisetas, pantalones y más</p>
+                </div>
+                <div class="tarjeta-tienda" data-tienda="alimentos">
+                    <div class="icono">🍎</div>
+                    <h3>Alimentos</h3>
+                    <p>Frutas, verduras y productos frescos</p>
+                </div>
+                <div class="tarjeta-tienda" data-tienda="libros">
+                    <div class="icono">📚</div>
+                    <h3>Libros</h3>
+                    <p>Novelas, técnicos y más</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Tienda -->
+    <div id="tiendaPantalla" class="pantalla">
+        <div class="barra-superior">
+            <button id="btnVolverAlMenu" class="btn-volver">← Volver</button>
+            <h2 id="nombreTienda">Tienda</h2>
+            <div class="info-carrito">
+                <span id="contadorCarrito" class="contador">0</span>
+                <button id="btnCarrito" class="btn-carrito">🛒</button>
+            </div>
+        </div>
+
+        <div class="contenedor-tienda">
+            <div class="grid-productos" id="gridProductos">
+                <!-- Los productos se generarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel del Carrito -->
+    <div id="panelCarrito" class="panel-carrito">
+        <div class="cabecera-carrito">
+            <h3>Mi Carrito</h3>
+            <button id="btnCerrarCarrito" class="btn-cerrar">✕</button>
+        </div>
+        <div id="listaCarrito" class="lista-carrito">
+            <!-- Items del carrito se generarán aquí -->
+        </div>
+        <div class="resumen-carrito">
+            <div class="fila-precio">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+            <div class="fila-precio">
+                <span>Impuesto (10%):</span>
+                <span id="impuesto">$0.00</span>
+            </div>
+            <div class="fila-precio total">
+                <span>Total:</span>
+                <span id="total">$0.00</span>
+            </div>
+            <button id="btnComprar" class="btn-comprar">Proceder al Pago</button>
+            <button id="btnVaciarCarrito" class="btn-vaciar">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmación de Compra -->
+    <div id="modalConfirmacion" class="modal">
+        <div class="contenido-modal">
+            <h2>¡Compra Realizada!</h2>
+            <p id="mensajeConfirmacion"></p>
+            <button id="btnCerrarModal" class="btn-confirmar">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Canvas para visualización 3D (futuro) -->
+    <div id="canvas3d" style="display: none;"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
